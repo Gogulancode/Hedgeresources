@@ -20,7 +20,7 @@ const Home = () => {
           <div className="absolute inset-0 hero-gradient"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
+        <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20 md:pt-24">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 animate-fade-in">
             Imagine a world where every purchase
             <br />

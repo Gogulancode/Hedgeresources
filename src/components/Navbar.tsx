@@ -51,7 +51,7 @@ const Navbar = () => {
             <img 
               src={logo} 
               alt="HEGDE Resources" 
-              className="h-12 w-auto lg:h-20 lg:w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-10 w-auto lg:h-16 lg:w-auto transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
