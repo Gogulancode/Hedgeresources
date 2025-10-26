@@ -10,7 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase, isSupabaseEnabled } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { sendEmail } from "@/lib/emailjs";
@@ -83,21 +83,29 @@ const EnquiryModal = ({
       } catch (emailError) {
         console.error("EmailJS error:", emailError);
         
-        // Fallback to Supabase if EmailJS fails
-        const { error: supabaseError } = await supabase.from("enquiries").insert({
-          name: validatedData.name,
-          email: validatedData.email,
-          phone: validatedData.phone,
-          product_id: productId,
-          message: validatedData.message,
-        });
+        // Fallback to Supabase if EmailJS fails and Supabase is configured
+        if (isSupabaseEnabled) {
+          try {
+            const { error: supabaseError } = await supabase.from("enquiries").insert({
+              name: validatedData.name,
+              email: validatedData.email,
+              phone: validatedData.phone,
+              product_id: productId,
+              message: validatedData.message,
+            });
 
-        if (supabaseError) throw supabaseError;
+            if (supabaseError) throw supabaseError;
 
-        toast({
-          title: "Enquiry submitted successfully!",
-          description: "We received your inquiry about " + productName + " and will get back to you soon.",
-        });
+            toast({
+              title: "Enquiry submitted successfully!",
+              description: "We received your inquiry about " + productName + " and will get back to you soon.",
+            });
+          } catch (supabaseError) {
+            throw new Error("Both email services are currently unavailable. Please try again later or contact us directly.");
+          }
+        } else {
+          throw new Error("Email service is currently unavailable. Please try again later or contact us directly at hegde.resources@gmail.com");
+        }
       }
 
       setFormData({ name: "", email: "", phone: "", message: "" });
