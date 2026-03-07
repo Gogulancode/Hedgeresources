@@ -111,7 +111,7 @@ const Contact = () => {
         canonicalPath="/contact"
       />
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[350px] flex items-center overflow-hidden">
+      <section className="relative h-[45vh] md:h-[50vh] min-h-[300px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
@@ -136,11 +136,11 @@ const Contact = () => {
       {/* Quick Contact Row */}
       <section className="bg-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {[
               { icon: Mail, label: "Email Us", value: "hegde.resources@gmail.com" },
               { icon: Phone, label: "Call Us", value: "+91 96191 11045" },
-              { icon: Clock, label: "Business Hours", value: "Mon–Sat, 9 AM – 6 PM" },
+              { icon: Clock, label: "Business Hours", value: "Mon—Sat, 9 AM — 6 PM" },
               { icon: Globe, label: "Serving", value: "10+ Countries Globally" },
             ].map((item) => (
               <div key={item.label} className="flex items-center gap-3">
@@ -158,9 +158,9 @@ const Contact = () => {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-16 bg-white">
+      <section className="py-10 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-12">
             {/* Contact Info - Left */}
             <div className="lg:col-span-2">
               <p className="section-label mb-3">Get in Touch</p>
@@ -223,7 +223,7 @@ const Contact = () => {
 
             {/* Form - Right */}
             <div className="lg:col-span-3">
-              <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm">
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8 border border-gray-100 shadow-sm">
                 <h2 className="text-xl font-bold text-gray-900 mb-2">Send us a Message</h2>
                 <p className="text-gray-500 text-sm mb-6">Fill in the form below and we&apos;ll get back to you within 24 hours.</p>
                 <form onSubmit={handleSubmit} className="space-y-5">

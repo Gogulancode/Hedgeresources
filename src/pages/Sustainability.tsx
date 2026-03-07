@@ -14,7 +14,7 @@ const Sustainability = () => {
         canonicalPath="/sustainability"
       />
       {/* Hero */}
-      <section className="relative pt-28 pb-20 overflow-hidden">
+      <section className="relative pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
@@ -52,7 +52,7 @@ const Sustainability = () => {
       {/* Impact Stats Row */}
       <section className="bg-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold mb-1">1000+</div>
               <div className="text-sm text-green-200">Tons Waste Diverted</div>
@@ -74,9 +74,9 @@ const Sustainability = () => {
       </section>
 
       {/* Our Approach */}
-      <section className="py-16 bg-white">
+      <section className="py-10 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
             <div>
               <p className="section-label mb-3">Our Approach</p>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
@@ -118,7 +118,7 @@ const Sustainability = () => {
       </section>
 
       {/* Sustainable Practices - Green Section */}
-      <section className="py-16 bg-green-800">
+      <section className="py-10 md:py-16 bg-green-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="section-label text-green-300 mb-3">How We Work</p>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-10">
@@ -160,7 +160,7 @@ const Sustainability = () => {
       </section>
 
       {/* Sustainability Goals */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 md:py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="section-label mb-3">Looking Ahead</p>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-10">
@@ -205,9 +205,9 @@ const Sustainability = () => {
       </section>
 
       {/* Global Reach */}
-      <section className="py-16 bg-white">
+      <section className="py-10 md:py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
             <div>
               <p className="section-label mb-3">Worldwide Presence</p>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -223,16 +223,16 @@ const Sustainability = () => {
             <div>
               <div className="flex flex-wrap gap-2">
                 {[
-                  { name: "India", flag: "🇮🇳" },
-                  { name: "UAE", flag: "🇦🇪" },
-                  { name: "Singapore", flag: "🇸🇬" },
-                  { name: "USA", flag: "🇺🇸" },
-                  { name: "UK", flag: "🇬🇧" },
-                  { name: "Germany", flag: "🇩🇪" },
-                  { name: "Australia", flag: "🇦🇺" },
-                  { name: "Japan", flag: "🇯🇵" },
-                  { name: "South Korea", flag: "🇰🇷" },
-                  { name: "Canada", flag: "🇨🇦" },
+                  { name: "India", flag: "\u{1F1EE}\u{1F1F3}" },
+                  { name: "UAE", flag: "\u{1F1E6}\u{1F1EA}" },
+                  { name: "Singapore", flag: "\u{1F1F8}\u{1F1EC}" },
+                  { name: "USA", flag: "\u{1F1FA}\u{1F1F8}" },
+                  { name: "UK", flag: "\u{1F1EC}\u{1F1E7}" },
+                  { name: "Germany", flag: "\u{1F1E9}\u{1F1EA}" },
+                  { name: "Australia", flag: "\u{1F1E6}\u{1F1FA}" },
+                  { name: "Japan", flag: "\u{1F1EF}\u{1F1F5}" },
+                  { name: "South Korea", flag: "\u{1F1F0}\u{1F1F7}" },
+                  { name: "Canada", flag: "\u{1F1E8}\u{1F1E6}" },
                 ].map((country) => (
                   <span key={country.name} className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium bg-gray-50 border border-gray-100 text-gray-700 hover:border-green-200 hover:bg-green-50 transition-colors">
                     <span className="text-lg">{country.flag}</span>

@@ -571,14 +571,14 @@ const ProductDetail = () => {
       />
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 pt-24">
-          <div className="flex items-center gap-2 text-sm text-gray-400">
-            <Link to="/" className="hover:text-green-700 transition-colors">Home</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <Link to="/products" className="hover:text-green-700 transition-colors">Products</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="hover:text-green-700 transition-colors">{product.category}</span>
-            <ChevronRight className="w-3.5 h-3.5" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 pt-20 md:pt-24">
+          <div className="flex items-center gap-2 text-sm text-gray-400 overflow-hidden">
+            <Link to="/" className="hover:text-green-700 transition-colors shrink-0">Home</Link>
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
+            <Link to="/products" className="hover:text-green-700 transition-colors shrink-0">Products</Link>
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
+            <span className="hover:text-green-700 transition-colors shrink-0 max-w-[120px] sm:max-w-none truncate">{product.category}</span>
+            <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <span className="text-gray-700 font-medium truncate">{product.name}</span>
           </div>
         </div>
@@ -587,7 +587,7 @@ const ProductDetail = () => {
       {/* Product Hero */}
       <div className="bg-white pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12">
             {/* Image */}
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden bg-gray-50 border border-gray-100 shadow-sm">
@@ -688,7 +688,7 @@ const ProductDetail = () => {
 
       {/* Detail Sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Description */}

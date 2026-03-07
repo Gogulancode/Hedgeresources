@@ -398,7 +398,7 @@ const Products = () => {
         canonicalPath="/products"
       />
       {/* Hero */}
-      <section className="relative h-[50vh] min-h-[350px] flex items-center overflow-hidden">
+      <section className="relative h-[45vh] md:h-[50vh] min-h-[300px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
@@ -425,8 +425,37 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex flex-col lg:flex-row gap-8">
 
+            {/* Mobile Search & Filters */}
+            <div className="lg:hidden space-y-3">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <Input
+                  type="text"
+                  placeholder="Search products..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="pl-10 h-10 text-sm bg-white border-gray-200 focus:border-green-600 rounded-lg"
+                />
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {categories.map((category) => (
+                  <button
+                    key={category}
+                    onClick={() => handleCategoryChange(category)}
+                    className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
+                      selectedCategory === category
+                        ? "bg-green-700 text-white"
+                        : "bg-white text-gray-600 border border-gray-200 hover:border-green-300"
+                    }`}
+                  >
+                    {category}
+                  </button>
+                ))}
+              </div>
+            </div>
+
             {/* Sidebar Filters */}
-            <aside className="lg:w-64 shrink-0">
+            <aside className="hidden lg:block lg:w-64 shrink-0">
               <div className="lg:sticky lg:top-24 space-y-6">
                 {/* Search */}
                 <div>

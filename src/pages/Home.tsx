@@ -15,7 +15,7 @@ const Home = () => {
         canonicalPath="/"
       />
       {/* Hero Section */}
-      <section className="relative h-[85vh] min-h-[500px] flex items-center overflow-hidden">
+      <section className="relative h-[75vh] md:h-[85vh] min-h-[450px] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
@@ -55,7 +55,7 @@ const Home = () => {
       {/* Stats Row */}
       <section className="bg-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             <div className="text-center">
               <div className="text-2xl md:text-3xl font-bold mb-1">100+</div>
               <div className="text-sm text-green-200">Happy Clients</div>
@@ -77,9 +77,9 @@ const Home = () => {
       </section>
 
       {/* About Us Teaser */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center">
             <div>
               <p className="section-label mb-3">Who We Are</p>
               <h2 className="text-2xl md:text-3xl font-semibold mb-5">Sustainable Solutions,<br />Rooted in India</h2>
@@ -100,23 +100,23 @@ const Home = () => {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-green-50 rounded-lg p-6 text-center">
+            <div className="grid grid-cols-2 gap-3 md:gap-4">
+              <div className="bg-green-50 rounded-lg p-4 md:p-6 text-center">
                 <Leaf className="w-7 h-7 text-green-700 mx-auto mb-3" />
                 <h3 className="text-sm font-semibold mb-1">100% Organic</h3>
                 <p className="text-xs text-gray-500">Certified organic fertilizers & natural inputs</p>
               </div>
-              <div className="bg-green-50 rounded-lg p-6 text-center">
+              <div className="bg-green-50 rounded-lg p-4 md:p-6 text-center">
                 <Recycle className="w-7 h-7 text-green-700 mx-auto mb-3" />
                 <h3 className="text-sm font-semibold mb-1">Eco Packaging</h3>
                 <p className="text-xs text-gray-500">Biodegradable & compostable alternatives</p>
               </div>
-              <div className="bg-green-50 rounded-lg p-6 text-center">
+              <div className="bg-green-50 rounded-lg p-4 md:p-6 text-center">
                 <Globe className="w-7 h-7 text-green-700 mx-auto mb-3" />
                 <h3 className="text-sm font-semibold mb-1">Global Reach</h3>
                 <p className="text-xs text-gray-500">Exporting to 10+ countries across continents</p>
               </div>
-              <div className="bg-green-50 rounded-lg p-6 text-center">
+              <div className="bg-green-50 rounded-lg p-4 md:p-6 text-center">
                 <Shield className="w-7 h-7 text-green-700 mx-auto mb-3" />
                 <h3 className="text-sm font-semibold mb-1">Quality Assured</h3>
                 <p className="text-xs text-gray-500">CPCB certified, ISO compliant standards</p>
@@ -159,7 +159,7 @@ const Home = () => {
       </section>
 
       {/* Product Categories */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
             <div>
@@ -183,7 +183,7 @@ const Home = () => {
               { name: "Compostable Bioplastics", desc: "CPCB certified D-cut, W-cut, garbage bags and films", count: "6 Products" },
               { name: "Jute Bags", desc: "Tote, pouch, bottle, zipper and window bags", count: "10 Products" },
             ].map((cat) => (
-              <Link to={`/products?category=${encodeURIComponent(cat.name)}`} key={cat.name} className="group relative rounded-xl overflow-hidden h-64">
+              <Link to={`/products?category=${encodeURIComponent(cat.name)}`} key={cat.name} className="group relative rounded-xl overflow-hidden h-48 md:h-64">
                 <img
                   src={categoryImages[cat.name]}
                   alt={cat.name}
@@ -208,7 +208,7 @@ const Home = () => {
               { name: "Cotton Bags", desc: "Drawstring, loop-handle & printed bags", count: "7 Products" },
               { name: "Canvas Bags", desc: "Premium totes & promotional bags", count: "4 Products" },
             ].map((cat) => (
-              <Link to={`/products?category=${encodeURIComponent(cat.name)}`} key={cat.name} className="group relative rounded-xl overflow-hidden h-48">
+              <Link to={`/products?category=${encodeURIComponent(cat.name)}`} key={cat.name} className="group relative rounded-xl overflow-hidden h-40 md:h-48">
                 <img
                   src={categoryImages[cat.name]}
                   alt={cat.name}
@@ -228,7 +228,7 @@ const Home = () => {
       </section>
 
       {/* Featured Products */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <p className="section-label mb-2">Best Sellers</p>
@@ -282,7 +282,7 @@ const Home = () => {
       </section>
 
       {/* How It Works / Process */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <p className="section-label mb-2">Simple Process</p>
@@ -317,7 +317,7 @@ const Home = () => {
       </section>
 
       {/* Global Reach */}
-      <section className="py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -376,7 +376,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-10">
             <p className="section-label mb-2">Client Feedback</p>
@@ -427,7 +427,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-green-800">
+      <section className="py-12 md:py-20 bg-green-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">
             Let's Build a Greener Future Together
