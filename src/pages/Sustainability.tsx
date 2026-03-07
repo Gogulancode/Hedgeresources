@@ -16,10 +16,10 @@ const Sustainability = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center hero-text">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
               From <span className="text-emerald-300">Nature</span>. For the <span className="text-teal-300">Future</span>.
             </h1>
-            <p className="text-xl md:text-2xl text-emerald-100 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-emerald-100 max-w-4xl mx-auto leading-relaxed">
               Our commitment to creating a sustainable tomorrow, today - through innovative products and responsible practices
             </p>
             <div className="mt-8 flex justify-center">
@@ -35,7 +35,7 @@ const Sustainability = () => {
         <div className="container mx-auto px-4">
         {/* Impact Stats */}
         <section className="mb-20 pt-16">
-          <h2 className="text-3xl font-bold mb-12 text-center">
+          <h2 className="text-2xl font-bold mb-12 text-center">
             Our Environmental Impact
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -44,7 +44,7 @@ const Sustainability = () => {
                 <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
                   <Recycle className="w-8 h-8 text-secondary" />
                 </div>
-                <div className="text-4xl font-bold text-primary mb-2">
+                <div className="text-2xl font-bold text-primary mb-2">
                   1000+ Tons
                 </div>
                 <p className="text-muted-foreground">
@@ -58,7 +58,7 @@ const Sustainability = () => {
                 <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
                   <Leaf className="w-8 h-8 text-secondary" />
                 </div>
-                <div className="text-4xl font-bold text-primary mb-2">
+                <div className="text-2xl font-bold text-primary mb-2">
                   500+ Tons
                 </div>
                 <p className="text-muted-foreground">
@@ -72,7 +72,7 @@ const Sustainability = () => {
                 <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-8 h-8 text-secondary" />
                 </div>
-                <div className="text-4xl font-bold text-primary mb-2">
+                <div className="text-2xl font-bold text-primary mb-2">
                   10+ Countries
                 </div>
                 <p className="text-muted-foreground">
@@ -86,7 +86,7 @@ const Sustainability = () => {
                 <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-secondary" />
                 </div>
-                <div className="text-4xl font-bold text-primary mb-2">
+                <div className="text-2xl font-bold text-primary mb-2">
                   30% Reduction
                 </div>
                 <p className="text-muted-foreground">
@@ -99,7 +99,7 @@ const Sustainability = () => {
 
         {/* Sustainability Practices */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-12 text-center">
+          <h2 className="text-2xl font-bold mb-12 text-center">
             Our Sustainable Practices
           </h2>
           <div className="max-w-4xl mx-auto space-y-8">
@@ -187,10 +187,10 @@ const Sustainability = () => {
 
         {/* Global Reach */}
         <section className="bg-secondary/10 rounded-lg p-8 md:p-12">
-          <h2 className="text-3xl font-bold mb-6 text-center">
+          <h2 className="text-2xl font-bold mb-6 text-center">
             Global Export Reach
           </h2>
-          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-8">
+          <p className="text-base text-muted-foreground text-center max-w-3xl mx-auto mb-8">
             Our sustainable products reach businesses and communities across
             continents, helping create a global movement towards environmental
             responsibility and conscious consumption.

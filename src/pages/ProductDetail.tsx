@@ -576,10 +576,10 @@ const ProductDetail = () => {
           {/* Product Info */}
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl lg:text-4xl font-black mb-4 text-gray-900">
+              <h1 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900">
                 {product.name}
               </h1>
-              <p className="text-lg text-gray-600">
+              <p className="text-base text-gray-600">
                 {product.short_description}
               </p>
             </div>
@@ -630,7 +630,7 @@ const ProductDetail = () => {
           {/* Description & Benefits */}
           <Card className="lg:col-span-2">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-black mb-4 text-gray-900">Product Description</h2>
+              <h2 className="text-xl font-bold mb-4 text-gray-900">Product Description</h2>
               <p className="text-gray-700 leading-relaxed mb-6">
                 {product.description}
               </p>

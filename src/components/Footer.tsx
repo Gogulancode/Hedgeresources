@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Leaf, Mail, Phone, Linkedin, Instagram } from "lucide-react";
+import { Mail, Phone, Linkedin, Instagram } from "lucide-react";
 import logo from "@/assets/logo.svg";
 import footerLogo from "@/assets/hedge-footer.png";
 

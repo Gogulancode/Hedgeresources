@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { supabase, isSupabaseEnabled } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { initEmailJS, sendEmail } from "@/lib/emailjs";
@@ -14,7 +13,7 @@ import { initEmailJS, sendEmail } from "@/lib/emailjs";
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
   email: z.string().trim().email("Invalid email address").max(255),
-  phone: z.string().trim().min(10, "Phone number must be at least 10 digits").max(20),
+  phone: z.string().trim().min(10, "Phone number must be at least 10 digits").max(20).regex(/^[+]?[\d\s()-]+$/, "Phone number can only contain digits, spaces, +, -, (, )"),
   productInterest: z.string().trim().min(1, "Please select your product interest").max(100),
   message: z.string().trim().min(1, "Message is required").max(1000),
 });
@@ -71,31 +70,7 @@ const Contact = () => {
         });
       } catch (emailError) {
         console.error("EmailJS error:", emailError);
-        
-        // Fallback to Supabase if EmailJS fails and Supabase is configured
-        if (isSupabaseEnabled) {
-          try {
-            const { error: supabaseError } = await supabase.from("enquiries").insert({
-              name: validatedData.name,
-              email: validatedData.email,
-              phone: validatedData.phone,
-              product_id: null,
-              product_interest: validatedData.productInterest,
-              message: validatedData.message,
-            });
-
-            if (supabaseError) throw supabaseError;
-
-            toast({
-              title: "Message sent successfully!",
-              description: "We received your message and will get back to you soon.",
-            });
-          } catch (supabaseError) {
-            throw new Error("Both email services are currently unavailable. Please try again later or contact us directly.");
-          }
-        } else {
-          throw new Error("Email service is currently unavailable. Please try again later or contact us directly at hegde.resources@gmail.com");
-        }
+        throw new Error("Email service is currently unavailable. Please try again later or contact us directly at hegde.resources@gmail.com");
       }
 
       setFormData({ name: "", email: "", phone: "", productInterest: "", message: "" });
@@ -116,7 +91,7 @@ const Contact = () => {
       } else {
         toast({
           title: "Error sending message",
-          description: "There was an issue sending your message. Please try again or contact us directly.",
+          description: error instanceof Error ? error.message : "There was an issue sending your message. Please try again or contact us directly.",
           variant: "destructive",
         });
       }
@@ -139,10 +114,10 @@ const Contact = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center hero-text">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
               Contact <span className="text-blue-300">Us</span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-blue-100 max-w-4xl mx-auto leading-relaxed">
               Let's Build a Greener Future Together - Your sustainable journey starts with a conversation
             </p>
             <div className="mt-8 flex justify-center">
@@ -161,7 +136,7 @@ const Contact = () => {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl font-bold mb-6">Get in Touch</h2>
+              <h2 className="text-xl font-bold mb-6">Get in Touch</h2>
               <p className="text-muted-foreground mb-8">
                 Have questions about our products or want to partner with us?
                 We'd love to hear from you. Our team is ready to help you make
@@ -230,7 +205,7 @@ const Contact = () => {
           <div>
             <Card className="shadow-large">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold mb-6">Send us a Message</h2>
+                <h2 className="text-xl font-bold mb-6">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Label htmlFor="name">Name *</Label>

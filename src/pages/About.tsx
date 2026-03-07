@@ -16,10 +16,10 @@ const About = () => {
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center hero-text">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
               About <span className="text-green-300">HEGDE Resources</span>
             </h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-green-100 max-w-4xl mx-auto leading-relaxed">
               Transforming the way the world consumes and produces, one sustainable product at a time
             </p>
             <div className="mt-8 flex justify-center">
@@ -37,7 +37,7 @@ const About = () => {
         {/* Company Story */}
         <section className="mb-20 pt-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
+            <h2 className="text-2xl font-bold mb-6 text-center">Our Story</h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 Founded with a vision to create a sustainable future, HEGDE
@@ -72,7 +72,7 @@ const About = () => {
                 <div className="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center mb-4">
                   <Eye className="w-7 h-7 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
+                <h3 className="text-xl font-bold mb-4">Our Vision</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   To be a global leader in sustainable products, creating a
                   positive environmental impact while supporting local
@@ -87,7 +87,7 @@ const About = () => {
                 <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mb-4">
                   <Target className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
+                <h3 className="text-xl font-bold mb-4">Our Mission</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   To provide high-quality, eco-friendly products that reduce
                   environmental footprint while promoting sustainable
@@ -101,7 +101,7 @@ const About = () => {
 
         {/* Values */}
         <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Values</h2>
+          <h2 className="text-2xl font-bold mb-12 text-center">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
               <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
@@ -146,24 +146,24 @@ const About = () => {
 
         {/* Certifications */}
         <section className="bg-secondary/10 rounded-lg p-8 md:p-12">
-          <h2 className="text-3xl font-bold mb-8 text-center">
+          <h2 className="text-2xl font-bold mb-8 text-center">
             Certifications & Standards
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="bg-card rounded-lg p-6 text-center shadow-soft">
-              <div className="text-2xl font-bold text-primary mb-2">CPCB</div>
+              <div className="text-xl font-bold text-primary mb-2">CPCB</div>
               <p className="text-sm text-muted-foreground">
                 Pollution Control
               </p>
             </div>
             <div className="bg-card rounded-lg p-6 text-center shadow-soft">
-              <div className="text-2xl font-bold text-primary mb-2">ISO</div>
+              <div className="text-xl font-bold text-primary mb-2">ISO</div>
               <p className="text-sm text-muted-foreground">
                 Quality Management
               </p>
             </div>
             <div className="bg-card rounded-lg p-6 text-center shadow-soft">
-              <div className="text-2xl font-bold text-primary mb-2">
+              <div className="text-xl font-bold text-primary mb-2">
                 Organic
               </div>
               <p className="text-sm text-muted-foreground">
@@ -171,7 +171,7 @@ const About = () => {
               </p>
             </div>
             <div className="bg-card rounded-lg p-6 text-center shadow-soft">
-              <div className="text-2xl font-bold text-primary mb-2">Export</div>
+              <div className="text-xl font-bold text-primary mb-2">Export</div>
               <p className="text-sm text-muted-foreground">
                 Export Quality
               </p>

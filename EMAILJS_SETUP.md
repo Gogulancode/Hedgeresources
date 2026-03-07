@@ -87,4 +87,4 @@ VITE_EMAILJS_PUBLIC_KEY=your_actual_public_key
 - {{message}} - Their message
 - {{to_email}} - Your email (hegde.resources@gmail.com)
 
-The system will automatically fallback to Supabase if EmailJS fails, ensuring no inquiries are lost.
+If EmailJS fails, the user will be shown an error message with a direct contact email.

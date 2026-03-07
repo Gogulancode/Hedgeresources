@@ -205,10 +205,10 @@ const Products = () => {
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center hero-text">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">
               Our <span className="text-green-300">Products</span>
             </h1>
-            <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-green-100 max-w-4xl mx-auto leading-relaxed">
               Discover our comprehensive range of organic fertilizers and sustainable packaging solutions designed for a greener tomorrow
             </p>
             <div className="mt-8 flex justify-center">
@@ -269,8 +269,8 @@ const Products = () => {
                 <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Search className="w-10 h-10 text-gray-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">No Products Found</h3>
-                <p className="text-gray-600 text-lg mb-6">No products match your current search criteria.</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">No Products Found</h3>
+                <p className="text-gray-600 text-base mb-6">No products match your current search criteria.</p>
                 <Button 
                   onClick={() => { setSearchTerm(""); setSelectedCategory("All"); }} 
                   className="bg-green-600 hover:bg-green-700 h-12 px-8 rounded-xl"
@@ -335,7 +335,7 @@ const Products = () => {
                   </div>
 
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-black mb-4 text-gray-900 group-hover:text-green-600 transition-colors duration-300">
+                    <h3 className="text-lg font-bold mb-4 text-gray-900 group-hover:text-green-600 transition-colors duration-300">
                       {product.name}
                     </h3>
                     <p className="text-gray-600 text-base mb-6 leading-relaxed">

@@ -21,17 +21,17 @@ const Home = () => {
         </div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground pt-20 md:pt-24">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 animate-fade-in">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in">
             Imagine a world where every purchase
             <br />
             <span className="text-gradient">contributes to a healthier planet</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-primary-foreground/90">
+          <p className="text-base md:text-lg mb-8 max-w-2xl mx-auto text-primary-foreground/90">
             Leading Indian exporter of eco-friendly and sustainable products
             for a greener tomorrow
           </p>
           <Link to="/products">
-            <Button size="lg" variant="secondary" className="group text-white">
+            <Button size="lg" className="group bg-white text-primary hover:bg-white/90 font-semibold">
               Explore Sustainable Solutions
               <ArrowRight className="ml-2 w-5 h-5 transition-smooth group-hover:translate-x-1" />
             </Button>
@@ -43,8 +43,8 @@ const Home = () => {
       <section className="py-20 bg-card">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black mb-4">Our Mission</h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Mission</h2>
+            <p className="text-base text-muted-foreground max-w-3xl mx-auto">
               Fostering conscious consumption and empowering individuals to make
               a difference for our planet's future
             </p>
@@ -56,7 +56,7 @@ const Home = () => {
                 <div className="w-14 h-14 rounded-full bg-secondary/20 flex items-center justify-center mb-4">
                   <Leaf className="w-7 h-7 text-secondary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Vision</h3>
+                <h3 className="text-lg font-semibold mb-3">Vision</h3>
                 <p className="text-muted-foreground">
                   To be a global leader in sustainable products, creating a
                   positive environmental impact while supporting local
@@ -70,7 +70,7 @@ const Home = () => {
                 <div className="w-14 h-14 rounded-full bg-primary/20 flex items-center justify-center mb-4">
                   <Globe className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3">Mission</h3>
+                <h3 className="text-lg font-semibold mb-3">Mission</h3>
                 <p className="text-muted-foreground">
                   Provide high-quality, eco-friendly products that reduce
                   environmental footprint while promoting sustainable
@@ -86,10 +86,10 @@ const Home = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
               Our Product Categories
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Sustainable solutions for agriculture and packaging needs
             </p>
           </div>
@@ -106,7 +106,7 @@ const Home = () => {
               <CardContent className="p-8">
                 <div className="flex items-center mb-3">
                   <Leaf className="w-6 h-6 text-secondary mr-2" />
-                  <h3 className="text-2xl font-black">Organic Fertilizers</h3>
+                  <h3 className="text-lg font-bold">Organic Fertilizers</h3>
                 </div>
                 <p className="text-muted-foreground mb-6">
                   Premium vermicompost, bio NPK complex, and enriched compost
@@ -132,7 +132,7 @@ const Home = () => {
               <CardContent className="p-8">
                 <div className="flex items-center mb-3">
                   <Package className="w-6 h-6 text-secondary mr-2" />
-                  <h3 className="text-2xl font-black">Sustainable Packaging</h3>
+                  <h3 className="text-lg font-bold">Sustainable Packaging</h3>
                 </div>
                 <p className="text-muted-foreground mb-6">
                   Biodegradable containers, eco-friendly boxes, and compostable
@@ -154,8 +154,8 @@ const Home = () => {
       <section className="py-20 bg-secondary/10">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black mb-4">Our Impact</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">Our Impact</h2>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Creating measurable positive change for the environment
             </p>
           </div>
@@ -165,7 +165,7 @@ const Home = () => {
               <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
                 <Award className="w-8 h-8 text-secondary" />
               </div>
-              <div className="text-3xl font-black text-primary mb-2">100+</div>
+              <div className="text-2xl font-bold text-primary mb-2">100+</div>
               <div className="text-sm text-muted-foreground">
                 Happy Clients
               </div>
@@ -175,7 +175,7 @@ const Home = () => {
               <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
                 <Leaf className="w-8 h-8 text-secondary" />
               </div>
-              <div className="text-3xl font-black text-primary mb-2">500T+</div>
+              <div className="text-2xl font-bold text-primary mb-2">500T+</div>
               <div className="text-sm text-muted-foreground">
                 Organic Compost
               </div>
@@ -185,7 +185,7 @@ const Home = () => {
               <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
                 <Package className="w-8 h-8 text-secondary" />
               </div>
-              <div className="text-3xl font-black text-primary mb-2">1M+</div>
+              <div className="text-2xl font-bold text-primary mb-2">1M+</div>
               <div className="text-sm text-muted-foreground">
                 Eco Packages
               </div>
@@ -195,7 +195,7 @@ const Home = () => {
               <div className="w-16 h-16 rounded-full bg-secondary/20 flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-secondary" />
               </div>
-              <div className="text-3xl font-black text-primary mb-2">10+</div>
+              <div className="text-2xl font-bold text-primary mb-2">10+</div>
               <div className="text-sm text-muted-foreground">
                 Countries Served
               </div>
@@ -207,10 +207,10 @@ const Home = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-primary to-primary/90">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-black text-primary-foreground mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-6">
             Let's Build a Greener Future Together
           </h2>
-          <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-base text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
             Partner with us to make sustainable choices that benefit your
             business and the planet
           </p>
