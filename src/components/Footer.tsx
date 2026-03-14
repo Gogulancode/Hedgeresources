@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, Linkedin, Instagram } from "lucide-react";
-import logo from "@/assets/Hedge.png";
+import logo from "@/assets/Hedge.webp";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
