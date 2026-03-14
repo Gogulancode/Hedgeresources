@@ -133,7 +133,7 @@ const Home = () => {
             <h2 className="text-2xl md:text-3xl font-semibold text-white mb-3">
               Why Partner With Us
             </h2>
-            <p className="text-green-200 max-w-2xl">
+            <p className="text-green-200 max-w-3xl whitespace-nowrap">
               We combine quality, sustainability, and reliability to deliver products that make a difference
             </p>
           </div>
