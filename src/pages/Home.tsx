@@ -56,20 +56,20 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold mb-1">100+</div>
-              <div className="text-sm text-green-200">Happy Clients</div>
+              <div className="text-2xl md:text-3xl font-bold mb-1">100%</div>
+              <div className="text-sm text-green-200">Sustainable</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold mb-1">500T+</div>
-              <div className="text-sm text-green-200">Organic Compost</div>
+              <div className="text-2xl md:text-3xl font-bold mb-1">50+</div>
+              <div className="text-sm text-green-200">Products Available</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold mb-1">1M+</div>
-              <div className="text-sm text-green-200">Eco Packages</div>
+              <div className="text-2xl md:text-3xl font-bold mb-1">100%</div>
+              <div className="text-sm text-green-200">Eco-Friendly</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold mb-1">10+</div>
-              <div className="text-sm text-green-200">Countries Served</div>
+              <div className="text-2xl md:text-3xl font-bold mb-1">Made in</div>
+              <div className="text-sm text-green-200">India</div>
             </div>
           </div>
         </div>
