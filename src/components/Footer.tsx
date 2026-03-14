@@ -60,7 +60,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social */}
+          {/* Social - hidden for now */}
+          {/*
           <div>
             <h3 className="text-sm font-semibold text-white mb-4">Follow Us</h3>
             <div className="flex gap-3">
@@ -80,6 +81,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
+          */}
         </div>
 
         <div className="mt-10 pt-6 border-t border-green-800 text-center">
