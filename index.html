@@ -67,7 +67,25 @@
   </head>
 
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Inline app shell for fast FCP — replaced by React on hydration -->
+      <style>
+        .app-shell{display:flex;flex-direction:column;min-height:100vh;background:#fff}
+        .app-shell-nav{height:64px;background:#1b4332;display:flex;align-items:center;padding:0 1.5rem}
+        .app-shell-logo{color:#fff;font-weight:700;font-size:1.25rem;font-family:system-ui,sans-serif}
+        .app-shell-hero{flex:1;background:#1b4332;display:flex;align-items:center;justify-content:center;min-height:60vh}
+        .app-shell-spinner{width:40px;height:40px;border:3px solid rgba(255,255,255,.2);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite}
+        @keyframes spin{to{transform:rotate(360deg)}}
+      </style>
+      <div class="app-shell">
+        <div class="app-shell-nav">
+          <span class="app-shell-logo">HEGDE Resources</span>
+        </div>
+        <div class="app-shell-hero">
+          <div class="app-shell-spinner"></div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
