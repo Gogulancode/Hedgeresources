@@ -10,7 +10,8 @@
  * The result: crawlers see full HTML content. Users get the same SPA experience
  * because React hydrates over the static HTML.
  */
-import { launch } from "puppeteer";
+import puppeteer from "puppeteer-core";
+import { platform } from "os";
 import { createServer } from "http";
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
 import { join, dirname } from "path";
@@ -130,7 +131,40 @@ async function prerender() {
   console.log("Starting prerender...\n");
 
   const server = await startServer();
-  const browser = await launch({ headless: true, args: ["--no-sandbox"] });
+  // Detect browser: use @sparticuz/chromium on Linux/CI, local Chrome otherwise
+  let launchOptions;
+  if (platform() === "linux") {
+    const chromium = await import("@sparticuz/chromium");
+    const executablePath = await chromium.default.executablePath();
+    launchOptions = {
+      args: chromium.default.args,
+      defaultViewport: chromium.default.defaultViewport,
+      executablePath,
+      headless: chromium.default.headless,
+    };
+  } else {
+    // Find local Chrome installation
+    const chromePaths = [
+      // Windows
+      "C:/Program Files/Google/Chrome/Application/chrome.exe",
+      "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+      process.env.LOCALAPPDATA + "/Google/Chrome/Application/chrome.exe",
+      // macOS
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    ];
+    const chromePath = chromePaths.find((p) => existsSync(p));
+    if (!chromePath) {
+      console.error("Chrome not found. Install Chrome or set CHROME_PATH.");
+      process.exit(1);
+    }
+    launchOptions = {
+      executablePath: chromePath,
+      headless: true,
+      args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    };
+  }
+
+  const browser = await puppeteer.launch(launchOptions);
 
   let success = 0;
   let failed = 0;
