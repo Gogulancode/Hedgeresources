@@ -567,7 +567,7 @@ const ProductDetail = () => {
         description={product.description}
         keywords={`${product.name}, ${product.category}, sustainable products, HEGDE Resources`}
         canonicalPath={`/products/${id}`}
-        ogImage={productImages[product.image]}
+        ogImage={productImages[product.id]}
       />
       {/* Product JSON-LD Structured Data */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -597,7 +597,7 @@ const ProductDetail = () => {
             <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <Link to="/products" className="hover:text-green-700 transition-colors shrink-0">Products</Link>
             <ChevronRight className="w-3.5 h-3.5 shrink-0" />
-            <span className="hover:text-green-700 transition-colors shrink-0 max-w-[120px] sm:max-w-none truncate">{product.category}</span>
+            <Link to={`/products?category=${encodeURIComponent(product.category)}`} className="hover:text-green-700 transition-colors shrink-0 max-w-[120px] sm:max-w-none truncate">{product.category}</Link>
             <ChevronRight className="w-3.5 h-3.5 shrink-0" />
             <span className="text-gray-700 font-medium truncate">{product.name}</span>
           </div>
